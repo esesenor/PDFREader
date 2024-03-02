@@ -37,8 +37,8 @@ const PDFReader = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center gap-6 m-10
-     bg-gradient-to-l from-teal-300 via-sky-950 to-sky-600"
+      className="flex flex-col justify-center items-center gap-6 -10
+     bg-sky-950 w-full h-full"
     >
       <h1 className="text-rose-100 p-4 text-xl">
         Extraer Números de Transferencia{" "}
@@ -46,7 +46,7 @@ const PDFReader = () => {
       <input type="file" onChange={handleFileChange} className="m-10" />
       <button
         onClick={extractNumerosTransferencia}
-        className="bg-rose-500 text-[#020202] w-[300px] 
+        className="bg-rose-300 text-[#020202] w-[300px] 
         p-4 shadow-sm shadow-gray-300 transition-all text-lg font-bold
         hover:-translate-y-1 hover:shadow-lg hover:shadow-white"
       >
