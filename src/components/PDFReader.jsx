@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { pdfjs } from "react-pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -50,7 +50,7 @@ const PDFReader = () => {
 
   return (
     <div className="flex flex-col justify-center items-center gap-6 bg-sky-950 w-full h-full">
-      <h1 className="text-rose-100 p-4 text-xl">
+      <h1 className="text-rose-100 p-4 text-xl text-center">
         Extraer Números de Transferencia y Requisición
       </h1>
       <input type="file" onChange={handleFileChange} className="m-10" />
@@ -61,9 +61,7 @@ const PDFReader = () => {
         Extraer Números
       </button>
       <div className="m-10 text-white">
-        <h2 className="mb-2 text-center">
-          Listado de Números de Transferencia y Requisición:
-        </h2>
+        <h2 className="mb-2 text-center">Listado</h2>
         <table className="table-auto text-center w-full">
           <thead>
             <tr>
@@ -83,15 +81,6 @@ const PDFReader = () => {
           </tbody>
         </table>
       </div>
-      {/* {file && (
-        <div className="m-10 w-full">
-          <Document file={file}>
-            {Array.from(new Array(file.numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
-        </div>
-      )} */}
     </div>
   );
 };
